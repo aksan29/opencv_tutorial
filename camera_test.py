@@ -6,8 +6,7 @@ def camera_test(cap):
     while True :
         _, frame = cap.read()
         cv2.imshow('frame' , frame)
-        k = cv2.waitKey(1)
-        if k == 27:
+        if cv2.waitKey(30) & 0xFF == ord('q'):
             break
 
 camera_test(cap)
